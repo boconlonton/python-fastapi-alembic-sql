@@ -13,6 +13,9 @@ class User(Base):
     hashed_password = Column(String(255))
     is_active = Column(Boolean, default=True)
 
+    email_1 = Column(String(255), unique=True, index=True)
+    email_2 = Column(String(255), unique=True, index=True)
+
     articles = relationship("Article", back_populates="author", cascade="all,delete")
 
     def __repr__(self):

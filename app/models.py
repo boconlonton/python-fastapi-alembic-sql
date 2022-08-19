@@ -29,5 +29,7 @@ class Article(Base):
     author_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"))
     author = relationship("User", back_populates="articles")
 
+    price = Column(String(50))
+
     def __repr__(self):
         return f"{self.title}"

@@ -12,6 +12,7 @@ mysqlclient = "^2.1.1"
 SQLAlchemy = "^1.4.40"
 email-validator = "^1.2.1"
 alembic = "^1.8.1"
+uvicorn = {extras = ["standard"], version = "^0.18.2"}
 
 [tool.poetry.dev-dependencies]
 
